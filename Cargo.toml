@@ -1,0 +1,11 @@
+[package]
+name = "base64-secret"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Base64 encoder/decoder with custom alphabet. The alphabet is sorted by a given key. The sorting is always deterministic."
+repository = "https://github.com/crodas/base64-secret-rs"
+
+[dependencies]
+base64 = "0.21.0"
+crc32fast = "1.3.2"
