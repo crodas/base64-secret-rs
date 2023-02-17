@@ -1,6 +1,6 @@
 [package]
 name = "base64-secret"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT"
 description = "Base64 encoder/decoder with custom alphabet. The alphabet is sorted by a given key. The sorting is always deterministic."

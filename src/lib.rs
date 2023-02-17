@@ -14,7 +14,8 @@
 #![deny(missing_docs)]
 #![allow(warnings)]
 
-use base64::{alphabet, engine, DecodeError, Engine};
+pub use base64::DecodeError as Error;
+use base64::{alphabet, engine, Engine};
 
 /// Base64 encoder/decoder with custom alphabet.
 ///
@@ -71,7 +72,7 @@ impl Base64 {
     }
 
     /// Decode the given input with the custom alphabet.
-    pub fn decode<T: AsRef<[u8]>>(&self, input: T) -> Result<Vec<u8>, DecodeError> {
+    pub fn decode<T: AsRef<[u8]>>(&self, input: T) -> Result<Vec<u8>, Error> {
         self.engine.decode(input)
     }
 }
